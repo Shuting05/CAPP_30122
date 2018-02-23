@@ -35,7 +35,7 @@ def find_attributes(jsonfile, start, end, GOOGLE_API_KEY, request_rate=50):
             continue 
 
         if request["status"] == "OK":
-            new_dictionary[attraction] = request["results"]
+            new_dictionary[attraction] = request["results"][0]
         else:
             new_dictionary[attraction] = None 
 
@@ -43,11 +43,11 @@ def find_attributes(jsonfile, start, end, GOOGLE_API_KEY, request_rate=50):
     with open("attraction_{}_{}.json".format(start, end), "w") as file:
         file.write(json.dumps(new_dictionary))
 
-    with open("failed_{}_{}.json".format(start, end), "w") as file:
-        file.write(json.dumps(dict(failed_request)))
+    if failed_request:
+        with open("failed_{}_{}.json".format(start, end), "w") as file:
+            file.write(json.dumps(dict(failed_request)))
 
-
-    
+ 
 
 '''
 scheduler = sched.scheduler(time.time, time.sleep)
