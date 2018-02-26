@@ -37,10 +37,11 @@ class ChromeDriver():
 
         more_xpath = "//*[contains(@onclick, 'handlers.clickExpand')]"
         more = self.driver.find_elements_by_xpath(more_xpath)
-        try:
-            more[0].click()
-        except:
-            print("Unable To Click")
+        if more: 
+            try:
+                more[0].click()
+            except:
+                print("Unable To Click")
 
 
     def turn_page(self):
@@ -79,12 +80,13 @@ class ChromeDriver():
 
         while self.driver.find_elements_by_xpath("//span[@class='nav next taLnk ui_button primary']"):
 
-            star_list = self.driver.find_elements_by_class_name("ratingInfo")
+            self.click_more()
+            time.sleep(1)
+            star_list = self.driver.find_elements_by_xpath("//div[@class = 'ratingInfo']")
             div_list = self.driver.find_elements_by_xpath("//p[@class = 'partial_entry']")
             title_list = self.driver.find_elements_by_class_name("noQuotes")
-            date_list = self.driver.find_elements_by_xpath("//span[@class='ratingDate relativeDate']")
-            date_list = [date_list[i].get_attribute("title") for i in range(0, len(date_list), 2)]
- 
+            date_list = self.driver.find_elements_by_xpath("//span[@class='ratingDate relativeDate'][@title ='']")
+            date_list = [date_list[i].text for i in range(len(date_list))]
             for i in range(len(date_list)): # There are 10 review per page
 
                 date = date_list[i]
@@ -95,6 +97,7 @@ class ChromeDriver():
                 review = tuple()
                 review += date,
                 print("pass")
+                print(len(star_list))
     
                 stars = int(star_list[i].find_element_by_tag_name('span').get_attribute('class')[-2: ])/10
                 review += stars,
@@ -105,15 +108,20 @@ class ChromeDriver():
     
                 text = div_list[i].text
                 review += text,
+                reviews |= {review}
+                #time.sleep(0.5)
+
+            self.turn_page()
+            print("turn page")
+            time.sleep(0.5)
     
             if self.driver.find_elements_by_xpath("//span[@class \
                 = 'nav next ui_button primary disabled']"):
                 break 
-            self.turn_page()
-            self.click_more()
            
-            reviews |= {review}
-            attraction_id['reviews'] = reviews
+
+        attraction_id['reviews'] = reviews
+        #self.driver.quit()
 
 
 
