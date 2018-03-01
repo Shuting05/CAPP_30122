@@ -139,12 +139,15 @@ class ChromeDriver():
                 = 'nav next ui_button primary disabled']"):
                 break
             if page > 20:
+                attraction_id['reviews'] = reviews
+                self.driver.quit()
+                print('complete 20 pages: ', attraction_id['reviews'][-1])
                 break
 
 
-        attraction_id['reviews'] = reviews
+        #attraction_id['reviews'] = reviews
         #return attraction_id
-        self.driver.quit()
+        #self.driver.quit()
 
 
 
