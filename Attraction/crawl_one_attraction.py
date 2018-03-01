@@ -20,6 +20,7 @@ def crawl_attr(attraction_file):
             url.append(row[1])
 
     for i in range(len(url)):
+        print(attr_name[i])
         c = click_03.ChromeDriver(url[i])
         is_attraction = c.is_attraction()
         attr = json.loads(is_attraction.get_attribute('text'))
