@@ -123,11 +123,11 @@ class ChromeDriver():
 
                     reviews.append(review)
             except StaleElementReferenceException:
-                driver.quit()
+                self.driver.quit()
                 continue
 
             except NoSuchElementException:
-                driver.quit()
+                self.driver.quit()
                 continue
 
             print("page complete: ", page)
