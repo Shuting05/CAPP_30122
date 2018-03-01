@@ -20,14 +20,15 @@ def crawl_attr(attraction_file):
             url.append(row[1])
 
     for i in range(len(url)):
-        print(attr_name[i])
+        name = attr_name[i]
+        print(name)
         c = click_03.ChromeDriver(url[i])
         is_attraction = c.is_attraction()
         attr = json.loads(is_attraction.get_attribute('text'))
         c.add_reviews(attr)
         attr_dict = {}
-        attr_dict[attr_name[i]] = attr
-        with open('{}.json'.format(attr_name[i]), 'w') as file:
+        attr_dict[name] = attr
+        with open('{}.json'.format(name), 'w') as file:
             file.write(json.dumps(attr_dict))
 
 
