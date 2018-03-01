@@ -6,6 +6,7 @@ import time
 from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import StaleElementReferenceException
+from selenium.common.exceptions import WebDriverException
 
 class ChromeDriver():
 
@@ -131,18 +132,20 @@ class ChromeDriver():
                 continue
 
             print("page complete: ", page)
-            self.turn_page()
-            time.sleep(2)
             page += 1
-
-            if self.driver.find_elements_by_xpath("//span[@class \
-                = 'nav next ui_button primary disabled']"):
-                break
             if page > 20:
                 attraction_id['reviews'] = reviews
                 self.driver.quit()
                 print('complete 20 pages: ', attraction_id['reviews'][-1])
                 break
+            self.turn_page()
+            time.sleep(2)
+
+
+            if self.driver.find_elements_by_xpath("//span[@class \
+                = 'nav next ui_button primary disabled']"):
+                break
+
 
 
         #attraction_id['reviews'] = reviews
