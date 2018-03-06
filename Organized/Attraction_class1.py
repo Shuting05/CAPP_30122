@@ -125,7 +125,23 @@ def find_shortest_path(current_spot, attraction_set, \
         find_shortest_path(current, destination, attraction_set, unvisited_set, order, shortest_path)
 
 
+def determine_region(origin, destination):
 
+    API_KEY = "AIzaSyBUsRf8MjvyiH6OujTYg6cvfy98Zc8snP0"
+    gmaps = googlemaps.Client(key=API_KEY)
+
+    try:
+        request = gmaps.directions(origins= (origin.lat,origin.lng), \
+            destinations=(destination.lat,destination.lng))
+        if request["status"] == "OK":
+            loc1 = request["routes"][0]["bounds"]["northest"]
+            loc2 = request["routes"][0]["bounds"]["southwest"]
+    except:
+        print("Request failed: ", origin.label, destination.label)
+
+
+# sql select attractions that between loc1[0] - loc2[0], loc2[1] - loc2[0]
+        
 
 
 
