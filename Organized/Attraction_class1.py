@@ -9,27 +9,25 @@ import json
 import math
 import googlemaps 
 
-
 class Factory():
 
-    def __init__(self, jsonfile1):
+    def __init__(self):
 
         # set the attraction dictionary to be private ?
-        self.data = self.create_from_file(jsonfile1)
+        self.data = self.create_from_file()
 
-    def create_from_file(self, jsonfile1):
+    def create_from_file(self):
         ''' output a list of attraction objects '''
-        instance = dict()
+        data = dict()
 
-        with open(jsonfile1, 'r') as file1:
+        with open("dataset.json", 'r') as file1:
             dictionary = json.load(file1)
-
 
         for attr, info in dictionary.items():
             attraction = Attraction(info)
-            instance[attr] = attraction
+            data[attr] = attraction
 
-        return instance
+        return data
 
 class Attraction():
 
@@ -38,7 +36,6 @@ class Attraction():
         for k, v in dictionary.items():
 
             self.label = k
-            #print(self.label)
             if "formatted_address" in v:
                 self.address = v["formatted_address"]
             if "rating" in v: 
@@ -129,10 +126,23 @@ def determine_region(origin, destination):
 
     API_KEY = "AIzaSyBUsRf8MjvyiH6OujTYg6cvfy98Zc8snP0"
     gmaps = googlemaps.Client(key=API_KEY)
+    ori_query = origin.replace(" ", "+")
+    des_query = destination.replace(" ", "+")
 
     try:
-        request = gmaps.directions(origins= (origin.lat,origin.lng), \
-            destinations=(destination.lat,destination.lng))
+    ori_request = gmaps.places(query=ori_query)
+    des_request = gmaps.places(query=des_query)
+    if ori_request["status"] == "OK" and des_request["status"] == "OK":
+        ori_lat = ori_request["geometry"]["location"]["lat"]
+        ori_lng = ori_request["geometry"]["location"]["lng"]
+        des_lat = des_request["geometry"]["location"]["lat"]
+        des_lng = des_request["geometry"]["location"]["lng"]
+    except:
+        print("INVALID REQUEST")
+
+    try:
+        request = gmaps.directions(origins= (ori_lat,ori_lng), \
+            destinations=(des_lat,des_lng))
         if request["status"] == "OK":
             loc1 = request["routes"][0]["bounds"]["northest"]
             loc2 = request["routes"][0]["bounds"]["southwest"]
@@ -141,6 +151,8 @@ def determine_region(origin, destination):
 
 
 # sql select attractions that between loc1[0] - loc2[0], loc2[1] - loc2[0]
+
+
         
 
 
