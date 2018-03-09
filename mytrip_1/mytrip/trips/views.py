@@ -46,11 +46,15 @@ def get_map_attraction(request):
         lng__gte=lng1).order_by('-rating', '-reviews_count')[:20]
     
     attr_list = []
+    attr_lat_lng = []
     for i in attr:
         attr_list.append(i.attraction.replace('&', '') + ', CA')
+        attr_lat_lng.append((i.lat, i.lng))
+
         # attr_list.append(i.attraction.replace('&', '') + ' ca')
     return render(request, 'trips/find_routes.html', \
-        {'org':org, 'des':des, 'list':attr_list, 'c_lat': lat_c, 'c_lng': lng_c})
+        {'org':org, 'des':des, 'list':attr_list, 'c_lat':lat_c, \
+        'c_lng':lng_c, 'lat_lng':attr_lat_lng})
 
 def get_attraction(request):
     return render(request, 'trips/map.html')

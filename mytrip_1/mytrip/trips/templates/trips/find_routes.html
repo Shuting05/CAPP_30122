@@ -1,66 +1,65 @@
+{% load static %} 
+<link rel="stylesheet" href="{% static 'trips/style.css' %}" />
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<!-- Template by Quackit.com -->
+<!-- Images by various sources under the Creative Commons CC0 license and/or the Creative Commons Zero license. 
+Although you can use them, for a more unique website, replace these images with your own. -->
+<html lang="en">
+
+<head>
+
     <meta charset="utf-8">
-    <title>Waypoints in directions</title>
-    <style>
-      #right-panel {
-        font-family: 'Roboto','sans-serif';
-        line-height: 30px;
-        padding-left: 10px;
-      }
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-      #right-panel select, #right-panel input {
-        font-size: 15px;
-      }
+    <title>Explore California</title>
 
-      #right-panel select {
-        width: 98%;
-      }
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="{% static 'trips/bootstrap.min.css' %}" />
 
-      #right-panel i {
-        font-size: 12px;
-      }
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-      #map {
-        height: 80%;
-        float: left;
-        width: 60%;
-      }
-      #right-panel {
-        margin: 20px;
-        border-width: 2px;
-        width: 20%;
-        height: 400px;
-        float: left;
-        text-align: left;
-        padding-top: 0;
-      }
-      #directions-panel {
-        margin-top: 10px;
-        background-color: #FFEE77;
-        padding: 20px;
-        overflow: scroll;
-        height: 100px;
-      }
-      #attraction-list {
-        margin-top: 10px;
-        background-color: #FFEE77;
-        border: 3px solid green;
-        padding: 20px;
-        overflow: scroll;
-        height: 200px;
-        float: left;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="map"></div>
+    <!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles -->
+     <link rel="stylesheet" href="{% static 'trips/custom.css' %}" />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom Fonts from Google -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+    
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav id="siteNav" class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Logo and responsive toggle -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <span class="glyphicon glyphicon-fire"></span> 
+                    MIT@U
+                </a>
+             </div>
+        </div><!-- /.container -->
+    </nav>
+
+
+        <section class="pageone-content">
+        <div class="container">
+            <div class="row">
+              <div class="col-sm-6">
+                <div id="map"></div>
     <div id="right-panel">
     <div>
     <b>Start:</b>
@@ -149,5 +148,86 @@
       <a href="https://www.tripadvisor.com/Attractions">{{ l|escape }}</a></li>
       {% endfor %}
     </div>
-  </body>
+                </div>
+                <div class="col-sm-6">
+                  <h2 class="section-header", style="margin-top: 40px; font-style: italic; font-family:  Geneva;">Tailor the Travel Route</h2>
+                  <p class="lead text-muted">We </p>
+                  <a href="#" class="btn btn-primary btn-lg">Classify It</a>
+                </div>                               
+            </div>
+        </div>
+    </section>
+
+
+    
+
+    <div class="container-fluid">
+        <div class="row promo">
+          <a href="#">
+        <div class="col-md-3 promo-item item-1">
+          <h3 onClick="reply_click(this.id)">
+          Unleash 
+          </h3>
+        </div>
+            </a>
+            <a href="#">
+        <div class="col-md-3 promo-item item-2">
+          <h3 onClick="reply_click(this.id)">
+            Synergize
+          </h3>
+        </div>
+            </a>
+            <a href="#">
+        <div class="col-md-3 promo-item item-3">
+          <h3 onClick="reply_click(this.id)">
+            Synergize
+          </h3>
+        </div>
+            </a>
+            <a href="#">
+        <div class="col-md-3 promo-item item-4">
+          <h3 onClick="reply_click(this.id)">
+            Synergize
+          </h3>
+        </div>
+            </a>  
+            <a href="#">
+        <div class="col-md-3 promo-item item-5">
+          <h3 onClick="reply_click(this.id)">
+            Synergize
+          </h3>
+        </div>
+            </a> 
+            <a href="#">
+        <div class="col-md-3 promo-item item-6">
+          <h3 onClick="reply_click(this.id)">
+            Synergize
+          </h3>
+        </div>
+            </a>                        
+            <a href="#">
+        <div class="col-md-3 promo-item item-7">
+          <h3 onClick="reply_click(this.id)">
+            Synergize
+          </h3>
+        </div>
+            </a>                        
+            <a href="#">
+        <div class="col-md-3 promo-item item-8">
+          <h3 onClick="reply_click(this.id)">
+            Synergize
+          </h3>
+        </div>
+            </a>                                                                                
+        </div>
+    </div>
+
+
+
+</body>
 </html>
+</!DOCTYPE html>
+
+
+
+
