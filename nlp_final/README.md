@@ -1,6 +1,7 @@
-<code>nlp_final</code>: : contains all scripts necessary to do natural. language processing
+#### Files Overview
+<code>nlp_final</code>: contains all scripts necessary to do natural. language processing
 
-contains five .py files:
+There are five .py files:
 
 <code>nlp.py</code>
 
@@ -12,12 +13,14 @@ contains five .py files:
 
 <code>rvw_word2vec.py</code>
 
+#### How to run
+
 To begin, run this command line in shell, then all processes will be done using all five files.
 
 <code>$python3 npl.py</code>
 
 
-
+#### Data Description
 the file <code>data</code> contains six files:
 <code>all_reviews_context</code>: saved gendim word2vec model
 
