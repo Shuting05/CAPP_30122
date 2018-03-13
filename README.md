@@ -79,9 +79,11 @@ you will be directed to a tripadvisor webpage of that attractions.
 on the webpage. After clicking "submit" button, you can see an optimal route is 
 displayed on the map, and the detailed travel plan is presented in the bottom. 
 
-* You can find out our raw NLP results by clicking the link at the buttom of the 
-page. You will be directed to a csv file that records the categories and attractions
-under each category. 
+* You can find out our raw NLP results by clicking the links at the buttom of the 
+page. You will be directed to three csv files:
+  + Acctractions and the key phrases found in reviews of attractions
+  + Categories of phrases with their attractions
+  + Attractions with their classifications and key phrases
 
 
 
