@@ -28,8 +28,8 @@ files in <code>reviews_dta</code>.
 attractions and its number of occurrance. 
 
 
-## For crawler.py, click.py 
-* The data were collected around one month ago. By the time we did our final presentation, we
+## For crawler.py, click.py, filter_attraction.py and crawl_one_attraction,py 
+* The data were collected about one month ago. By the time we did our final presentation, we
 have successfully demonstrated how our crawler works. However, we found out that this crawler
 function cannot work as expected on the submission date due to the modification of tripadvisor 
 website. We feel appologized if you are unable to check our function implementation or
