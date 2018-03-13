@@ -12,7 +12,10 @@ This repository contains the final course project for CAPP 30122.
 
 * <code>crawler</code>: contains all scripts necessary to scrape attraction informations.
 
+* <code>mytrip</code>: contains all scripts necessary for interface created by Django.
+
 * <code>Presentation_slides</code>: contains the presentation slides.
+
 
 ## Required Packages:
 
