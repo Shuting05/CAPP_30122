@@ -24,16 +24,16 @@ import json
 
 
 ################### load model #################
-W2V_MODEL_NAME = 'all_reviews_context'
+W2V_MODEL_NAME = 'data/all_reviews_context'
 
 
 ################### Input files ################
-PHRS_INFILE = 'gensim_phrs_noscore.csv'
-ATTR_RVW_FILE = 'attr_rvw.json'
+PHRS_INFILE = 'data/gensim_phrs_noscore.csv'
+ATTR_RVW_FILE = 'data/attr_rvw.json'
 
 ################### Output files ###############
-ATTR_MATCH_PHRS= 'attr_match_phrs.csv'
-MERGE_SIMILAR_PHRS = 'phrs_merge.csv'
+ATTR_MATCH_PHRS= 'data/attr_match_phrs.csv'
+MERGE_SIMILAR_PHRS = 'data/phrs_merge.csv'
 
 
 ################### constant value

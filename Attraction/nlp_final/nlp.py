@@ -4,7 +4,10 @@
 ### "Original"
 
 #######################################################################
-# This file is the start point of the whole natural language processing.
+# This file is the start point of the whole natural language processing,
+# including rvw_word2vec.py and phrase_classify.
+# Class_Phrase.py and hasg_table.py are helper files
+#
 # To begin, run $python3 npl.py in shell
 
 #######################################################################
@@ -13,11 +16,12 @@ import pandas as pd
 import csv
 import rvw_word2vec
 import phrase_classify
+
 ############## Input file ################
-INPUT_FILE = 'merged_attrs.json'
+INPUT_FILE = 'data/merged_attrs.json'
 
 ############## Output file ###############
-OUTPUT_FILE = 'attr_rvw.json'
+OUTPUT_FILE = 'data/attr_rvw.json'
 
 
 
@@ -62,26 +66,14 @@ def write_files(attr_rvw):
     Write a csv file with two columns(name, reviews);
     wirte a .txt file with all reviews from all attractions
     '''
-    #attr_rvw = reviews_cleaning(INPUT_FILE)
-    '''
-    f = open('attr_rvw.txt', 'w')
-    attr_rvw.apply(lambda x: f.write(x))
-    f.close()
-    '''
 
-    '''
-    with open('attr_rvw.csv', 'w', newline='') as csvfile:
-        writer = csv.writer(csvfile)
-        for i in range(len(attr_rvw)):
-            writer.writerow([attr_rvw.index[i], attr_rvw[i]])
-    '''
 
     with open(OUTPUT_FILE, 'w') as file:
         file.write(attr_rvw.to_json(orient='index'))
 
 
 if __name__ == "__main__":
-#def go():
+
     attr_rvw = reviews_cleaning()
     write_files(attr_rvw)
     rvw_word2vec.go()

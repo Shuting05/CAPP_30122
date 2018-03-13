@@ -34,15 +34,14 @@ from gensim.models import Phrases
 from gensim.models import word2vec
 
 ############ Input file ###############
-ATTR_ATTRIBUTES_FILE = 'merged_attrs.json'
+ATTR_ATTRIBUTES_FILE = 'data/merged_attrs.json'
 
 ############ Output file ##############
-# W2V_OUTFILE = 'w2v_single.csv'
-PHRS_OUTFILE = 'gensim_phrs_noscore.csv'
+PHRS_OUTFILE = 'data/gensim_phrs_noscore.csv'
 
 ############ Outout model #############
-W2V_MODEL_NAME = 'all_reviews_context'
-# PHRS_MODEL_NAME = 'all_phrs_context'
+W2V_MODEL_NAME = 'data/all_reviews_context'
+
 
 def go():
     '''
@@ -191,21 +190,6 @@ def word2vec_model(sentences):
     model.save(W2V_MODEL_NAME)
 
 
-    #Write model result into a csv file
-    '''
-    with open(W2V_OUTFILE, 'w', newline='') as csvfile:
-        writer = csv.writer(csvfile)
-        sent = set()
-        for s in sentences:
-            if (len(s) == 1): # only write out when s is a single word
-                if s[0] not in sent:
-                    try:
-                        writer.writerow([s[0]] + model.most_similar(s[0]))
-                        count += 1
-                        sent |= {s[0]}
-                    except:
-                        continue
-    '''
 
 
 
