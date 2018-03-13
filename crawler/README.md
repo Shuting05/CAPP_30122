@@ -27,3 +27,10 @@ files in <code>reviews_dta</code>.
 * <code>attr_match_phrs.json</code>: the dataset that contains the phrases appeared in each
 attractions and its number of occurrance. 
 
+
+## For crawler.py, click.py 
+* The data were collected around one month ago. By the time we did our final presentation, we
+have successfully demonstrated how our crawler works. However, we found out that this crawler
+function cannot work as expected on the submission date due to the modification of tripadvisor 
+website. We feel appologized if you are unable to check our function implementation or
+replicate our result. 
