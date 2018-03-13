@@ -46,7 +46,7 @@ called **Project**.
       * nltk.download()      
     + **Friendly Reminder**: you only need to install once, and it might 
       take about 30s to 1min to finish all required installations. 
-      (patience is a virtue:sunglasses:)
+   
 
 ## How to launch AldaCourse on **Ubuntu**:
 1. Go to the home directory of **Project** in your machine and type in 
