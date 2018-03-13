@@ -89,13 +89,13 @@ page. You will be directed to three csv files:
   + Attractions with their classifications and key phrases
 
 ## Contributors
-**Ruxin Chen** : Contributed to crawling data, requesting data from Googlemap API, web desgin and NLP.
+**Ruxin Chen** : Contributed to crawling data, requesting data from Googlemap API, web desgin and NLP.  
 [RuxinChen](https://github.com/RuxinChen)
 
-**Shuting Chen** : Contributed to the whole Django implementation.
+**Shuting Chen** : Contributed to the whole Django implementation.  
 [Shuting05](https://github.com/Shuting05)
 
-**Mengchen Shi** : Contributed to crawling data and NLP.
+**Mengchen Shi** : Contributed to crawling data and NLP.  
 [mcs2017](https://github.com/mcs2017)
 
 
