@@ -46,6 +46,7 @@ called **Project**.
       * nltk.download()      
     + **Friendly Reminder**: you only need to install once, and it might 
       take about 30s to 1min to finish all required installations. 
+      (patience is a virtue:sunglasses:)
 
 ## How to launch AldaCourse on **Ubuntu**:
 1. Go to the home directory of **Project** in your machine and type in 
@@ -61,6 +62,7 @@ the current terminal you are using could no longer input other bash command.
 browser and you will see our amazing interface, powered by Django.
 
 ## How to use our program:
+### I. 
 * Once you have successfully see our interface, the first thing you 
 want to do, of course, is to input the **origin** and **destination**
 (anywhere in California) that you want your trip to start and end with. 
@@ -76,6 +78,10 @@ you will be directed to a tripadvisor webpage of that attractions.
 * You can choose whatever attractions that you find interested following the instruction
 on the webpage. After clicking "submit" button, you can see an optimal route is 
 displayed on the map, and the detailed travel plan is presented in the bottom. 
+
+* You can find out our raw NLP results by clicking the link at the buttom of the 
+page. You will be directed to a csv file that records the categories and attractions
+under each category. 
 
 
 
