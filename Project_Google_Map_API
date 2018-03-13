@@ -1,0 +1,13 @@
+Google Map API Information
+
+Reference Page:
+https://github.com/googlemaps/google-maps-services-python
+
+APIs we used:
+Directions API & Places API
+
+GOOGLE_API_KEY = "AIzaSyBOrt_ShtRC1-O-KFUR0S2PQ3Ir6zXMzTY"
+
+GOOGLE_API_KEY = "AIzaSyBUsRf8MjvyiH6OujTYg6cvfy98Zc8snP0"
+
+GOOGLE_API_KEY = "AIzaSyBn2wFz7GxUVCZDzvvrNaKip6vu0KVY-2I"
