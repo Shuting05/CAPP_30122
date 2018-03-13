@@ -42,8 +42,8 @@ called **Project**.
       smoothly in your machine.
     + The nltk pakeage has to be downloaded in python, so after firing up the 
       ipython3, run the following command:
-      * >>> import nltk
-      * >>> nltk.download()      
+      * import nltk
+      * nltk.download()      
     + **Friendly Reminder**: you only need to install once, and it might 
       take about 30s to 1min to finish all required installations. 
       (patience is a virtue:sunglasses:)
