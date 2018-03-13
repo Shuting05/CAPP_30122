@@ -12,15 +12,7 @@ This repository contains the final course project for CAPP 30122.
 
 * <code>crawler</code>: contains all scripts necessary to scrape attraction informations.
 
-* <code>NLTK</code>: contains python scripts used to select the top 6 positive
- and negative words from each evaluation comments.
-
-* <code>ScheduleVisualization</code>: contains python scripts and 
-template.xlms file used to create all possible combinations of non-conflict 
-courses schedules based on user input. 
-
-* <code>Project_Info</code>: contains project description files and 
-the presentation slides.
+* <code>Presentation_slides</code>: contains the presentation slides.
 
 ## Required Packages:
 
@@ -50,8 +42,8 @@ called **Project**.
       smoothly in your machine.
     + The nltk pakeage has to be downloaded in python, so after firing up the 
       ipython3, run the following command:
-      # >>> import nltk
-      # >>> nltk.download()      
+      * >>> import nltk
+      * >>> nltk.download()      
     + **Friendly Reminder**: you only need to install once, and it might 
       take about 30s to 1min to finish all required installations. 
       (patience is a virtue:sunglasses:)
