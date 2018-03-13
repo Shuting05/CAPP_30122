@@ -8,13 +8,9 @@ The University of Chicago | Winter 2018
 This repository contains the final course project for CAPP 30122. 
 
 ## About all sub-directories:
-* <code>AldaCourse</code>: contains all individual components of Project ALDA 
-listed below together with a Django interface.
+* <code>nlp_final</code>: contains all scripts necessary to do natural language processing
 
 * <code>crawler</code>: contains all scripts necessary to scrape attraction informations.
-
-* <code>CourseEvaluation</code>: contains all scripts necessary to scrap 
-course evalations.
 
 * <code>NLTK</code>: contains python scripts used to select the top 6 positive
  and negative words from each evaluation comments.
@@ -27,10 +23,13 @@ courses schedules based on user input.
 the presentation slides.
 
 ## Required Packages:
-* 
+
 * Selenium (v3.11.0)
-* Django (v1.10.6)
+* Django (v2.0.3)
 * ChromeDriver (v2.36)
+* gensim (installation guideline:  https://radimrehurek.com/gensim/install.html)
+* nltk: (installation guideline: http://www.nltk.org/install.html)
+* googlemaps 
 
 ## How to install all required packages on **Ubuntu**:
 1. Fire up a terminal, and go to the directory you want to store our program.
@@ -40,30 +39,34 @@ the presentation slides.
 <code>git clone https://github.com/Shuting05/CAPP_30122.git</code>
 
 3. After cloning the git repo, you will find a new local sub-directory 
-called **Project_ALDA**.
+called **Project**.
 
-4. In the home directory of **Project_ALDA**, type in 
-<code>sh alda_install.sh</code>. 
+4. In the home directory of **Project**, type in 
+<code>sh Installation.sh</code>. 
     + After typing in this bash command, you might be asked to input the 
       password of your machine.
     + After inputting your password, Linux would start to install all required
-      packages so as to ensure AldaCourse could run successfully and 
+      packages so as to ensure our program could run successfully and 
       smoothly in your machine.
+    + The nltk pakeage has to be downloaded in python, so after firing up the 
+      ipython3, run the following command:
+      # >>> import nltk
+      # >>> nltk.download()      
     + **Friendly Reminder**: you only need to install once, and it might 
       take about 30s to 1min to finish all required installations. 
       (patience is a virtue:sunglasses:)
 
 ## How to launch AldaCourse on **Ubuntu**:
-1. Go to the home directory of AldaCourse in your machine and type in 
-<code>sh alda_prep.sh</code>.
+1. Go to the home directory of **Project** in your machine and type in 
+<code>sh launch_interface.sh</code>.
     + If you are a first-time user and just finished installing all packages 
 following the tutorial above, you can actually just stay in the same terminal 
-window and input the command <code>sh alda_prep.sh</code>.
-    + **Notice**: after typing in <code>sh alda_prep.sh</code>, you will find 
+window and input the command <code>sh launch_interface.sh</code>.
+    + **Notice**: after typing in <code>sh launch_interface.sh</code>, you will find 
 the current terminal you are using could no longer input other bash command. 
 
 2. **Open a new terminal in the same directory**, and type in 
-<code>sh alda_init.sh</code>. It would automatically launch your default web 
+<code>sh initialize.sh</code>. It would automatically launch your default web 
 browser and you will see our amazing interface, powered by Django.
 
 ## How to use our program:
@@ -133,15 +136,3 @@ able to get the course you want. Some other factors, such as how often you
 check your emails or how fast you can type and click on your laptop, are 
 extraordinarily crucial. So... Good luck!
 
-## Contributors
-**Alice Mee Seon Chung** [Alicechung](https://github.com/Alicechung)
-
-**Luxi Luke Han** [magicahan](https://github.com/magicahan)
-
-**Dongping Gabriel Zhang** [dpzhang](https://github.com/dpzhang)
-
-**Ningyin Ariel Xu** [sixisxu](https://github.com/sixisxu)
-
-We would like to express our sincere gratitude to **Dr. Matthew Wachs** and 
-**Dr. Amitabh Chaudhary** for your teaching, guidance, and support throughout 
-the quarter.
