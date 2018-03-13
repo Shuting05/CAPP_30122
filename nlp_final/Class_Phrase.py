@@ -1,7 +1,7 @@
 ### Project MIT@U
 ### Class Phrase
 ### Mengchen Shi Mar. 4th
-### "Modified" --- learn from CAPP 30122 PA5
+### "Origin" --- inspired by CAPP 30122 PA5
 
 ########################################################################
 
