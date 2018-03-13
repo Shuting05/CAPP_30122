@@ -81,7 +81,7 @@ displayed on the map, and the detailed travel plan is presented in the bottom.
 
 * You can find out our raw NLP results by clicking the links at the buttom of the 
 page. You will be directed to three csv files:
-  + Acctractions and the key phrases found in reviews of attractions
+  + Attractions and the key phrases found in reviews of attractions
   + Categories of phrases with their attractions
   + Attractions with their classifications and key phrases
 
