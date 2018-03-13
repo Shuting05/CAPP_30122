@@ -46,7 +46,6 @@ called **Project**.
       * nltk.download()      
     + **Friendly Reminder**: you only need to install once, and it might 
       take about 30s to 1min to finish all required installations. 
-      (patience is a virtue:sunglasses:)
 
 ## How to launch AldaCourse on **Ubuntu**:
 1. Go to the home directory of **Project** in your machine and type in 
@@ -62,7 +61,6 @@ the current terminal you are using could no longer input other bash command.
 browser and you will see our amazing interface, powered by Django.
 
 ## How to use our program:
-### I. 
 * Once you have successfully see our interface, the first thing you 
 want to do, of course, is to input the **origin** and **destination**
 (anywhere in California) that you want your trip to start and end with. 
