@@ -3,15 +3,15 @@
 
 There are five .py files:
 
-<code>nlp.py</code>: beginnig of nlp, including some data cleaning codes.
+<code>nlp.py</code>: beginnig of nlp, including some data cleaning codes
 
-<code>phrase_classify.py</code>: clustering(classifying) phrases.
+<code>phrase_classify.py</code>: clustering(classifying) phrases
 
 <code>rvw_word2vec.py</code>: Processing reviews using gensim word2vec package and Phrases package. Generate a word2vec model and a Phrases model.
 
-<code>Class_Phrase.py</code>: helper class to match attractions with phrases.
+<code>Class_Phrase.py</code>: helper class to match attractions with phrases
 
-<code>hash_table.py</code>: hash table helper class.
+<code>hash_table.py</code>: hash table helper class
 
 
 
