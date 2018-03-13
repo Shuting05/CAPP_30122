@@ -51,7 +51,7 @@ called **Project**.
       take about 30s to 1min to finish all required installations. 
    
 
-## How to launch AldaCourse on **Ubuntu**:
+## How to launch our program on **Ubuntu**:
 1. Go to the home directory of **Project** in your machine and type in 
 <code>sh launch_interface.sh</code>.
     + If you are a first-time user and just finished installing all packages 
