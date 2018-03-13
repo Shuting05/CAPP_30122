@@ -7,3 +7,6 @@ sudo python3 -m pip install Django
 sudo python3 -m pip install selenium
 sudo python3 -m pip install numpy
 
+sudo python3 -m pip install -U googlemaps 
+sudo python3 -m pip install --upgrade gensim
+sudo python3 -m pip install -U nltk
